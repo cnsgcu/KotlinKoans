@@ -24,7 +24,6 @@ fun task1(collection: Collection<Int>): String {
         }
     }
     sb.append("}")
-    return sb.toString()
 
-    //todoTask1(collection)
+    return sb.toString()
 }

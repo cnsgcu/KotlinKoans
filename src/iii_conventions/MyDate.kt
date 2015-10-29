@@ -18,7 +18,11 @@ fun MyDate.rangeTo(end: MyDate): DateRange {
     return DateRange(this, end)
 }
 
-fun MyDate.plus(vararg timeIntervals: TimeInterval): MyDate {
+fun MyDate.plus(timeInterval: TimeInterval): MyDate {
+    return addTimeIntervals(timeInterval, 1)
+}
+
+fun MyDate.plus(timeIntervals: Array<TimeInterval>): MyDate {
     return timeIntervals.fold(this, {date, timeInterval -> date.addTimeIntervals(timeInterval, 1)})
 }
 

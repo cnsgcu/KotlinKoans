@@ -34,7 +34,6 @@ fun foo(name: String, toUpperCase: Boolean): String {
 
 
 fun task3(): String {
-//    todoTask3()
     return (foo("a") +
             foo("b", number = 1) +
             foo("c", toUpperCase = true) +
