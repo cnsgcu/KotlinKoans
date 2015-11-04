@@ -12,7 +12,7 @@ fun todoTask38(): Nothing = TODO(
     """
 )
 
-fun <T, R> myWith(receiver: T, f: T.() -> R): R = todoTask38()
+fun <T, R> myWith(receiver: T, f: T.() -> R): R = receiver.f()
 
 fun buildString(): String {
     val stringBuilder = StringBuilder()
@@ -27,7 +27,7 @@ fun buildString(): String {
 
 fun buildMap(): Map<Int, String> {
     val map = HashMap<Int, String>()
-    with (map) {
+    myWith (map) {
         put(0, "0")
         for (i in 1..10) {
             put(i, "$i")
